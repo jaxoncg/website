@@ -16,6 +16,8 @@
     return p.webp ? '<picture><source srcset="' + esc(p.webp) + '" type="image/webp">' + img + '</picture>' : img;
   }
 
+  window.JG = { photo: photo, esc: esc }; // shared with portfolio.js
+
   /* Services rows */
   var svc = $('#services');
   if (svc) svc.innerHTML = C.services.map(function (s) {
